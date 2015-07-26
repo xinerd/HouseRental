@@ -10,9 +10,20 @@
           <root url="file://$MODULE_DIR$/web" relative="/" />
         </webroots>
         <sourceRoots>
-          <root url="file://$MODULE_DIR$/src" />
+          <root url="file://$MODULE_DIR$/src/main/java" />
+          <root url="file://$MODULE_DIR$/src/main/resources" />
         </sourceRoots>
       </configuration>
+      <facet type="Struts2" name="Struts 2">
+        <configuration>
+          <fileset id="s2fileset" name="My Fileset " removed="false">
+            <file>file://$MODULE_DIR$/src/main/resources/struts.xml</file>
+            <file>jar://$USER_HOME$/develop/jar/struts/Struts 2-2.3.20.1/struts2-core.jar!/struts-default.xml</file>
+            <file>jar://$USER_HOME$/develop/jar/struts-extra/json/struts2-json-plugin-2.3.24.jar!/struts-plugin.xml</file>
+          </fileset>
+          <propertiesKeys disabled="false" />
+        </configuration>
+      </facet>
     </facet>
     <facet type="hibernate" name="Hibernate">
       <configuration>
@@ -50,5 +61,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="Struts 2-2.3.20" level="application" />
+    <orderEntry type="library" name="struts-json" level="application" />
   </component>
 </module>

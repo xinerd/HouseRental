@@ -7,8 +7,6 @@ import org.junit.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.*;
-
 public class H4SessionFactoryTest {
     @Test
     public void sessionTest() {

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+        "http://struts.apache.org/dtds/struts-2.1.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true"/>
+    <constant name="struts.ui.theme" value="simple"/>
+    <constant name="struts.i18n.encoding" value="UTF-8"/>
+    <constant name="struts.custom.i18n.resources" value="message"/>
+
+    <!-- global package -->
+    <package name="house-global" namespace="/" extends="struts-default">
+        <!-- 默认action -->
+        <!--<default-action-ref name="default"/>-->
+
+        <!-- 全局结果 -->
+        <global-results>
+            <result name="house.success">/pages/success.jsp</result>
+            <result name="house.fail">/pages/fail.jsp</result>
+        </global-results>
+
+    </package>
+
+    <!-- json package -->
+    <package name="house-json" namespace="/" extends="json-default">
+        <action name="login" class="cn.fmachine.web.action.UserAction"
+                method="login">
+            <result type="json"/>
+            <result type="json" name="login"/>
+
+        </action>
+
+
+    </package>
+
+    <!-- 房屋管理 package -->
+    <package name="house-manage" namespace="/" extends="house-global">
+        <action name="logout" class="cn.fmachine.web.action.UserAction"
+                method="logout">
+            <result name="house.manage">/pages/manage.jsp</result>
+        </action>
+
+
+    </package>
+</struts>
